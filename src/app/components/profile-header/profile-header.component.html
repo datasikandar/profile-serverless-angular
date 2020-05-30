@@ -1,0 +1,41 @@
+
+
+  <table class="ui basic table">
+    <tbody>
+      <tr>
+        <td>
+            <div class="ui card">
+                <div class="image">
+                  <img src="{{personal.picture}}">
+                </div>
+                <div class="content">
+                  <a class="header">{{personal.name}}</a>
+                  <div class="meta">
+                    <span class="date">{{personal.title}} &nbsp; <a href="{{personal.blog}}"><i class="wordpress icon"></i></a></span>
+                  </div>
+                  <div class="description">
+                    <a class="ui circular twitter icon button">
+                      <i class="twitter icon"></i>
+                    </a>
+                    <a class="ui circular linkedin icon button" href="{{personal.linkedin}}">
+                      <i class="linkedin icon"></i>
+                    </a>
+                    <a class="ui circular github icon button" href="{{personal.github}}">
+                      <i class="github icon"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="extra content">
+                  <a>
+                    <i class="user icon"></i>
+                    {{personal.address}}
+                  </a>
+                </div>
+              </div>
+        </td>
+        <td>
+            <app-summary [statistics]="statistics" [summary]="summary"></app-summary>
+        </td>
+      </tr>
+    </tbody>
+  </table>

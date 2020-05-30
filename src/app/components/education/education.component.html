@@ -1,0 +1,17 @@
+<h3 class="ui block header">Education</h3>
+<div class="ui items" *ngFor="let edu of education">
+    <div class="item">
+        <div class="ui tiny image">
+            <img src="{{edu.icon}}">
+        </div>
+        <div class="content">
+            <a class="header">{{edu.degree}}</a>
+            <div class="meta">
+                <span>{{edu.university}} &nbsp;&nbsp;&nbsp; <i class="{{edu.country}} flag"></i></span>
+            </div>
+            <div class="meta">
+                <p>{{edu.year}} </p>
+            </div>
+        </div>
+    </div>
+</div>

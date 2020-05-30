@@ -1,0 +1,23 @@
+<h3 class="ui block header">Projects</h3>
+<div class="ui items" *ngFor="let project of projects">
+  <div class="item">
+    <div class="ui tiny image">
+      <img src="{{project.icon}}">
+    </div>
+    <div class="content">
+      <a class="header">{{project.projectName}}</a>
+      <div class="meta">
+        <span>{{project.company}} &nbsp;&nbsp;&nbsp; <i class="{{project.country}} flag"></i></span>
+      </div>
+      <div class="meta">
+        <p>{{project.startDate | date:'MMMM yyyy'}} - {{project.endDate | date:'MMMM yyyy'}}</p>
+      </div>
+      <div class="description">
+        <p>{{project.description}}</p>
+      </div>
+      <div class="description">
+        {{project.tools}}
+      </div>
+    </div>
+  </div>
+</div>

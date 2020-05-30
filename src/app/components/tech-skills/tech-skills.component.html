@@ -1,0 +1,12 @@
+<h3 class="ui block header">Technical Skills</h3>
+<div class="ui cards">
+    <div class="card" *ngFor="let skill of skills | keyvalue">
+        <div class="content">
+          <div class="header">{{skill.key}}</div>
+          <div class="meta"></div>
+          <div class="description">
+            <a class="ui label"  *ngFor="let s of skill.value">{{s}}</a>
+          </div>
+        </div>
+      </div>
+</div>

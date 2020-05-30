@@ -1,0 +1,24 @@
+<h3 class="ui block header">Experience</h3>
+
+<div class="ui two column grid">
+  <div class="column" *ngFor="let exp of experience">
+    <div class="ui raised segment">
+      <a class="ui blue ribbon label">{{exp.role}}</a>
+      <span [ngTemplateOutlet]="exp.ongoing ? ongoing : endDate" [ngTemplateOutletContext]="{exp:exp}">
+      </span>
+      <p></p>
+      <p><b>{{exp.company}}</b></p>
+      <ul class="ui list">
+        <li *ngFor="let pr of exp.projects">{{pr}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<ng-template #ongoing let-exp="exp">
+  {{exp.startDate | date:'MMM yyyy'}} - Till date
+</ng-template>
+
+<ng-template #endDate let-exp="exp">
+  {{exp.startDate | date:'MMM yyyy'}} - {{exp.endDate | date:'MMM yyyy'}}
+</ng-template>
